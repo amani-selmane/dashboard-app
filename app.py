@@ -10,10 +10,10 @@ st.set_page_config(
 st.markdown("""
     <style>
         .block-container {
-            padding-top: 1rem;
-            padding-bottom: 0rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding: 0.5rem 0.5rem 0rem 0.5rem !important;
+        }
+        iframe {
+            width: 100% !important;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -24,8 +24,8 @@ EMBED_URL = "https://app.powerbi.com/reportEmbed?reportId=efaf934a-f411-4ac5-b0f
 
 components.iframe(
     src=EMBED_URL,
-    width=1400,
-    height=1200,
+    width=None,
+    height=900,
     scrolling=False
 )
 
