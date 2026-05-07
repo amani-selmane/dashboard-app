@@ -7,6 +7,18 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown("""
+    <style>
+        .block-container {
+            padding: 1rem 1rem 0rem 1rem !important;
+            max-width: 100% !important;
+        }
+        section[data-testid="stMain"] {
+            overflow-x: hidden;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("📊 Dashboard Multi_Company Analytics")
 st.markdown("---")
 
@@ -14,9 +26,9 @@ EMBED_URL = "https://app.powerbi.com/reportEmbed?reportId=efaf934a-f411-4ac5-b0f
 
 components.iframe(
     src=EMBED_URL,
-    width=None,
+    width=1400,
     height=820,
-    scrolling=True
+    scrolling=False
 )
 
 st.markdown("---")
