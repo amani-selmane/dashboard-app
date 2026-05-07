@@ -7,17 +7,26 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown("""
+    <style>
+        .block-container {
+            padding-top: 1rem;
+            padding-bottom: 0rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("📊 Dashboard Multi_Company Analytics")
-st.markdown("---")
 
 EMBED_URL = "https://app.powerbi.com/reportEmbed?reportId=efaf934a-f411-4ac5-b0fc-7db259900b50&autoAuth=true&ctid=a62ee7c4-ed2d-4991-b4b8-3120e8333e11"
 
 components.iframe(
     src=EMBED_URL,
-    width=None,
-    height=820,
-    scrolling=True
+    width=1400,
+    height=1200,
+    scrolling=False
 )
 
-st.markdown("---")
 st.caption("Données provenant de Power BI Service")
